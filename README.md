@@ -1,2 +1,2 @@
-# Virrealy
+# Virrealy-frontend
 Hackathon project
