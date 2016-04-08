@@ -1,0 +1,9 @@
+{
+  "name": "virrealy-client",
+  "version": "1.0.0",
+  "dependencies": {
+    "hexmachina": "git:https://github.com/DoclerLabs/hexMachina.git",
+    "hamcrest": "git:https://github.com/grosmar/hamcrest-haxe.git",
+    "mockatoo": "git:https://github.com/grosmar/mockatoo.git"
+  }
+}

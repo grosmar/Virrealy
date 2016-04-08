@@ -1,0 +1,12 @@
+
+--each
+
+-cp src 
+-cp test
+
+-lib hexmachina
+ 
+-resource src/virrealyclient/configuration/ModuleConfiguration.xml@moduleConfiguration
+-resource src/virrealyclient/configuration/OrderConfiguration.xml@orderConfiguration
+-resource src/virrealyclient/configuration/ServiceConfiguration.xml@serviceConfiguration
+-resource src/virrealyclient/configuration/ViewConfigurationJS.xml@viewConfigurationJS

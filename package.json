@@ -1,0 +1,36 @@
+{
+  "name": "virrealy-client",
+  "version": "1.0.0",
+  "description": "VirrealyClient",
+  "main": "index.js",
+  "private": true, 
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+	"postinstall": "npm run install.haxelibs && npm run checkout.tools && npm run update.projectfiles && npm run build.dev",
+	"install.haxelibs": "haxelib newrepo && haxelib install --always",
+    "build.dev": "npm run build.haxe.js.dev && npm run generate.static",
+	"build.prod": "npm run build.haxe.js.prod && npm run generate.static",
+	"build.haxe.js.prod": "npm run generate.imports && haxe ./build/haxe/build-src.hxml -js bin/VirrealyClient.js",
+	"build.haxe.js.dev": "npm run generate.imports && haxe ./build/haxe/build-src.hxml -js bin/VirrealyClient.js -debug",
+	"build.haxe.js.test": "npm run generate.imports && haxe ./build/haxe/build-test.hxml -js bin/VirrealyClientTest.js -debug",
+	"generate.imports": "neko ./tools/hex3rdPartyTools/utilities/xml/GenerateImports/bin/GenerateImports.n  -dir ./src/virrealyclient/configuration -output ./src/Imports.hx",
+    "generate.static": "gulp --gulpfile ./build/gulpfile.js",
+	"checkout.tools": "node ./batch/checkout_tools.js",
+	"update.projectfiles": "node -e \"var fs = require('fs'); ['VirrealyClient.hxproj', 'VirrealyClient.Test.hxproj'].forEach(function(filename){ fs.createReadStream('./resource/flashdevelop/'+filename).pipe(fs.createWriteStream('./'+filename)) });\"",
+	"update.all": "haxelib update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grosmar/virrealy-frontend-deploy.git"
+  },
+  "author": "duke",
+  "license": "ISC",
+  "devDependencies": {
+    
+  },
+  "dependencies": {
+	"gulp": ""
+  } 
+}

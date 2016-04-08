@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<!-- ORDER -->
+	
+	<state id="assemblingEnd" ref="virrealyClient.state.ASSEMBLING_END">
+		<enter command-class="virrealyclient.order.bootstrap.BootstrapMacro" fire-once="true"/>
+	</state>
+	
+	<trigger id="orderList" type="Object">
+		<!--<listen ref="sampleService">
+			<event static-ref="virrealyclient.samplepackage.sampleclass.SAMPLE_STATIC_PROPERTY" strategy="virrealyclient.order.bootstrap.BootstrapMacro"/>
+		</listen>-->
+	</trigger>
+	
+	
+	
+</root>

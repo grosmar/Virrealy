@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root name="virrealyClient">
+    <include file="virrealyclient/configuration/ModuleConfiguration.xml"/>
+    <include file="virrealyclient/configuration/ServiceConfiguration.xml"/>
+    <include file="virrealyclient/configuration/OrderConfiguration.xml"/>
+    <include file="virrealyclient/configuration/ViewConfigurationJS.xml"/>
+</root>
