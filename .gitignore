@@ -3,6 +3,6 @@ bin/
 node_modules/
 npm-debug.log
 tools
-VirrealyClient.Test.hxproj
-VirrealyClient.hxproj
+/VirrealyClient.Test.hxproj
+/VirrealyClient.hxproj
 src/Imports.hx
