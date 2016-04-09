@@ -245,9 +245,12 @@ function errorCallback(error) {
 		if ( wasFound == false )
 		{
 			wasFound = true;
+			
+			setTimeout( function () {
             document.getElementById("video").style.display = "none";
             document.getElementById("stage3_table").style.display = "none";
 			document.getElementById("nextArea").style.display = "block";
+			}, 5000 );
 			//document.getElementById("song").play();
 		}
 		
@@ -296,7 +299,7 @@ function errorCallback(error) {
 <video id="video" width=320 height=240 autoplay="true" style="display:none;"></video>
 
 <div id="textbox">
-    <table cellpadding="0" cellspacing="0" border="0" class="stage3_table" align="center">
+    <table cellpadding="0" cellspacing="0" border="0" class="stage3_table" id="stage3_table" align="center">
         <tr>
             <td valign="top"><img src="img/code.jpg" width="165" height="165" border="0"></td>
             <td valign="top">
