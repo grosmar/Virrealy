@@ -6,3 +6,4 @@ tools
 /VirrealyClient.Test.hxproj
 /VirrealyClient.hxproj
 src/Imports.hx
+.idea
