@@ -50,7 +50,7 @@ function start( )
 	document.getElementById("canvasContainer").style.display = "block";
 
 	if (window.DeviceMotionEvent != undefined) {
-		window.ondevicemotion = function(e) {
+		window.addEventListener( "devicemotion", function(e) {
 			ax = event.accelerationIncludingGravity.x;
 			ay = event.accelerationIncludingGravity.y;
 			az = event.accelerationIncludingGravity.z;
@@ -129,7 +129,7 @@ function start( )
 			ctx.stroke();
 			
 		}, 50);
-	} 
+	}); 
 	
 	return false;
 }
